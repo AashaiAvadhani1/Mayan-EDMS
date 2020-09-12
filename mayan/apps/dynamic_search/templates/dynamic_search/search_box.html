@@ -36,6 +36,11 @@
 
                     <div class="input-group">
                         {% if setting_disable_simple_search == False %}
+
+                            <label>
+                            Search terms
+                            <input type="form-control">
+                            </label>
                             <input class="form-control" name="q" placeholder="{% trans 'Search terms' %}" type="text" value="{{ search_terms|default:'' }}">
                         {% endif %}
                         <span class="input-group-btn">
