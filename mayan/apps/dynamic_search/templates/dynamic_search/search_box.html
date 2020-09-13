@@ -20,7 +20,13 @@
                 {% else %}
                     <div class="col-sm-8">
                 {% endif %}
+                    <label>
+                        Select Search Model
+                    </label>
                     <select class="form-control" id="selectSearchModel" name="_search_model_name">
+                        <label>
+                            Select Search Model
+                        </label>
                         {% for search_model in search_models %}
                         {{ search_model.self.get_full_name }}
                             <option {% if search_model.get_full_name == 'documents.Document' %}selected{% endif %} value="{{ search_model.get_full_name }}">{{ search_model }}</option>
@@ -44,7 +50,10 @@
                         {% endif %}
                         <span class="input-group-btn">
                             {% if setting_disable_simple_search == False %}
+                            <label>
+                                Receive promotional offers?
                                 <button class="btn btn-default" type="submit">{% trans 'Search' %}</button>
+                            </label>
                                 {% endif %}
                             <a class="btn btn-primary" href="" id="btnSearchAdvanced" >                {% if setting_disable_simple_search == False %}{% trans 'Advanced' %}{% else %}{% trans 'Advanced search' %}{% endif %}</a>
                         </span>
